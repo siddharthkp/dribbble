@@ -3,12 +3,3 @@
 .shot {
   max-width: 220px;
 }
-
-.shot .avatar-block {
-  margin-top: map-get($global-spacing, small);
-}
-
-.shot i {
-  /* bad */
-  color: map-get($global-color-text, subtle);
-}
