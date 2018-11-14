@@ -1,22 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./button.scss"
-import { Icon } from "components"
 
 const Button = props => {
   return (
     <button
-      className={`button button--${props.appearance} button--${props.size}`}
+      className={`button button--${props.appearance}`}
       disabled={props.disabled}
     >
-      {props.icon ? (
-        <span className="icon-container">
-          <Icon name={props.icon} />
-          {props.children}
-        </span>
-      ) : (
-        props.children
-      )}
+      {props.children}
     </button>
   )
 }
@@ -30,14 +22,12 @@ Button.propTypes = {
     "info",
     "accent",
     "success"
-  ]),
-  size: PropTypes.oneOf(["small", "normal", "large"])
+  ])
 }
 
 Button.defaultProps = {
   disabled: false,
-  appearance: "primary",
-  size: "normal"
+  appearance: "primary"
 }
 
 export default Button

@@ -2,12 +2,11 @@
 
 $font-family: $global-font-family;
 $font-size: map-get($global-font-size, body-small);
-$line-height: map-get($global-font-line-height, body-small);
 $font-weight: map-get($global-font-weight, medium);
 $border-size: $global-misc-border-size;
 $border-radius: map-get($global-misc-border-radius, medium);
 $disabled-opacity: 0.5;
-$icon-margin: map-get($global-spacing, small);
+$magic-line-height: 1.3; /* Line height is 1.3 for a nice even number height */
 
 /* Map of supported appearances */
 $appearances: (
@@ -15,8 +14,7 @@ $appearances: (
   secondary: "secondary",
   secondary-alt: "secondary-alt",
   info: "info",
-  accent: "accent",
-  success: "success"
+  accent: "accent"
 );
 
 /* Map of background color for each appearance */
@@ -25,8 +23,7 @@ $background: (
   secondary: transparent,
   secondary-alt: $global-color-white,
   info: map-get($global-color-info, 500),
-  accent: map-get($global-color-accent, 500),
-  success: map-get($global-color-success, 500)
+  accent: map-get($global-color-accent, 500)
 );
 
 $background--hover: (
@@ -34,8 +31,7 @@ $background--hover: (
   secondary: transparent,
   secondary-alt: $global-color-white,
   info: map-get($global-color-accent, 500),
-  accent: map-get($global-color-accent, 700),
-  success: map-get($global-color-success, 700)
+  accent: map-get($global-color-accent, 700)
 );
 
 $background--active: (
@@ -43,8 +39,7 @@ $background--active: (
   secondary: transparent,
   secondary-alt: $global-color-white,
   info: map-get($global-color-accent, 700),
-  accent: map-get($global-color-accent, 900),
-  success: map-get($global-color-success, -90) 0
+  accent: map-get($global-color-accent, 900)
 );
 
 $text: (
@@ -52,8 +47,7 @@ $text: (
   secondary: map-get($global-color-text, primary-light),
   secondary-alt: map-get($global-color-text, primary-light),
   info: map-get($global-color-text, primary-light),
-  accent: $global-color-white,
-  success: $global-color-white
+  accent: $global-color-white
 );
 
 $text--hover: (
@@ -61,8 +55,7 @@ $text--hover: (
   secondary: map-get($global-color-text, primary),
   secondary-alt: map-get($global-color-text, primary),
   info: $global-color-white,
-  accent: $global-color-white,
-  success: $global-color-white
+  accent: $global-color-white
 );
 
 $text--active: (
@@ -70,8 +63,7 @@ $text--active: (
   secondary: map-get($global-color-text, link),
   secondary-alt: map-get($global-color-text, link),
   info: $global-color-white,
-  accent: $global-color-white,
-  success: $global-color-white
+  accent: $global-color-white
 );
 
 $border: (
@@ -79,8 +71,7 @@ $border: (
   secondary: map-get($global-color-text, primary-light),
   secondary-alt: map-get($global-color-text, primary-light),
   info: map-get($global-color-info, 500),
-  accent: map-get($global-color-accent, 500),
-  success: map-get($global-color-success, -50) 0
+  accent: map-get($global-color-accent, 500)
 );
 
 $border--hover: (
@@ -88,8 +79,7 @@ $border--hover: (
   secondary: map-get($global-color-text, primary),
   secondary-alt: map-get($global-color-text, primary),
   info: map-get($global-color-accent, 500),
-  accent: map-get($global-color-accent, 700),
-  success: map-get($global-color-success, -70) 0
+  accent: map-get($global-color-accent, 700)
 );
 
 $border--active: (
@@ -97,8 +87,7 @@ $border--active: (
   secondary: map-get($global-color-text, link),
   secondary-alt: map-get($global-color-text, link),
   info: map-get($global-color-accent, 700),
-  accent: map-get($global-color-accent, 900),
-  success: map-get($global-color-success, -90) 0
+  accent: map-get($global-color-accent, 900)
 );
 
 $border--active: (
@@ -106,39 +95,25 @@ $border--active: (
   secondary: transparent,
   secondary-alt: $global-color-white,
   info: map-get($global-color-info, 500),
-  accent: map-get($global-color-accent, 500),
-  success: map-get($global-color-success, -50) 0
+  accent: map-get($global-color-accent, 500)
 );
 
-/* Size map for padding */
-$sizes: (
-  large: (
-    y: map-get($global-spacing, large),
-    x: map-get($global-spacing, large)
-  ),
-  normal: (
-    y: map-get($global-spacing, small),
-    x: map-get($global-spacing, medium)
-  ),
-  small: (
-    y: map-get($global-spacing, xsmall),
-    x: map-get($global-spacing, small)
-  )
-);
+/* Padding for button */
+$padding-vertical: map-get($global-spacing, small);
+$padding-horizontal: map-get($global-spacing, medium);
 
 .button {
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight;
-  line-height: $line-height;
+  line-height: $magic-line-height;
   text-align: center;
 
   border: $border-size solid;
   border-radius: $border-radius;
   cursor: pointer;
-  /* default to normal padding */
-  padding: map-get(map-get($sizes, normal), y)
-    map-get(map-get($sizes, normal), x);
+
+  padding: $padding-vertical $padding-horizontal;
 }
 
 /* For each appearance, created a new class  */
@@ -169,23 +144,4 @@ $sizes: (
       border-color: map-get($border, $name);
     }
   }
-}
-
-/* For each size, created a new class  */
-@each $name, $value in $sizes {
-  .button--#{$name} {
-    padding: map-get($value, y) map-get($value, x);
-  }
-}
-
-/* Styles for icon inside button */
-.button .icon {
-  margin-right: $icon-margin;
-}
-.button .icon path {
-  fill: currentColor;
-}
-.button .icon-container {
-  display: flex;
-  align-items: center;
 }
