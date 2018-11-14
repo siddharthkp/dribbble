@@ -1,0 +1,72 @@
+@import "node_modules/tokens/tokens";
+
+$font-family: $global-font-family;
+$line-height: map-get($global-font-line-height, body);
+$border-size: $global-misc-border-size;
+$border-radius: map-get($global-misc-border-radius, large);
+$box-shadow: $global-misc-box-shadow--inset;
+$disabled-opacity: 0.5;
+
+$text-color: map-get($global-color-text, primary);
+$placeholder-color: map-get($global-color-text, secondary);
+
+$padding: map-get($global-spacing, small) 12px;
+
+$input: (
+  background: map-get($global-color-background, info),
+  border: map-get($global-color-background, info)
+);
+
+$input-hover: (
+  background: map-get($global-color-background, light-alt),
+  border: map-get($global-color-background, light-alt)
+);
+
+$input-focus: (
+  background: $global-color-white,
+  border: map-get($global-color-background, info)
+);
+
+$error-border: map-get($global-color-danger, 500);
+
+%input {
+  width: 100%;
+
+  font-family: $font-family;
+  line-height: $line-height;
+  text-align: left;
+  padding: $padding;
+
+  border: $border-size solid;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  background: map-get($input, background);
+  border-color: map-get($input, border);
+  color: $text-color;
+}
+
+%input::placeholder {
+  color: $placeholder-color;
+}
+
+%input:hover {
+  background: map-get($input-hover, background);
+  border-color: map-get($input-hover, border);
+}
+
+%input:focus {
+  outline: none;
+  background: map-get($input-focus, background);
+  border-color: map-get($input-focus, border);
+}
+
+%input.error {
+  border-color: $error-border;
+}
+
+%input:disabled {
+  opacity: $disabled-opacity;
+  background: map-get($input, background);
+  border-color: map-get($input, border);
+}

@@ -1,0 +1,73 @@
+@import "node_modules/tokens/tokens";
+
+$font-family: $global-font-family;
+// $field-gap: map-get($global-spacing, small);
+$field-gap: map-get($global-spacing, xlarge);
+
+$label-font-size: map-get($global-font-size, body-plus);
+$label-text-color: map-get($global-color-text, primary);
+$label-margin: map-get($global-spacing, small);
+$label-font-weight: map-get($global-font-weight, medium);
+
+$label-optional-font-size: map-get($global-font-size, body-small);
+$label-optional-text-color: map-get($global-color-text, secondary);
+
+$counter-font-size: map-get($global-font-size, caption-text);
+$counter-text-color: map-get($global-color-text, secondary);
+$counter-font-weight: map-get($global-font-weight, medium);
+
+$help-text-font-size: map-get($global-font-size, body-small);
+$help-text-text-color: map-get($global-color-text, secondary);
+$help-text-margin: map-get($global-spacing, small);
+
+$icon-margin: map-get($global-spacing, small);
+$actions-gap: map-get($global-spacing, small);
+
+.form {
+  text-align: left;
+}
+
+.form .field {
+  margin-bottom: $field-gap;
+  position: relative;
+}
+
+.form .field + .field {
+  margin-top: $field-gap;
+}
+
+.form .field label {
+  display: inline-block;
+  font-family: $font-family;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  color: $label-text-color;
+  margin-bottom: $label-margin;
+}
+
+.form .field .optional {
+  font-size: label-optional-font-size;
+  color: $label-optional-text-color;
+}
+
+.form .field .counter {
+  position: absolute;
+  right: 0;
+  font-size: $counter-font-size;
+  font-weight: $counter-font-weight;
+  color: $counter-text-color;
+}
+
+.form .field .help-text {
+  margin-top: $help-text-margin;
+  font-size: $help-text-font-size;
+  color: $help-text-text-color;
+}
+
+.form .field label .icon {
+  margin-left: $icon-margin;
+}
+
+.form .actions > .button {
+  margin-right: $actions-gap;
+}

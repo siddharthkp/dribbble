@@ -1,0 +1,38 @@
+---
+name: AvatarBlock
+---
+
+import { Playground, PropsTable } from "docz"
+import { AvatarBlock } from "components"
+import { Preview, Stack } from "components/_helpers"
+
+# Avatar
+
+<Preview>
+  <AvatarBlock
+    name="Guille Mesyngier"
+    label="pro"
+    src="https://cdn.dribbble.com/users/441550/avatars/small/ff7601302c6a004465e0f936110a35de.jpg"
+  />
+</Preview>
+
+<PropsTable of={AvatarBlock} />
+
+## Examples
+
+<Playground>
+  <Stack>
+    <AvatarBlock
+      name="Guille Mesyngier"
+      url="https://dribbble.com/gmesyngier"
+      label="pro"
+      src="https://cdn.dribbble.com/users/441550/avatars/small/ff7601302c6a004465e0f936110a35de.jpg"
+    />
+    <AvatarBlock
+      name="Auth0"
+      url="https://dribbble.com/auth0"
+      label="team"
+      src="https://cdn.dribbble.com/users/752778/avatars/small/bdd1ffd9a06d66f3782a60f3d2e3444d.png?1512067400"
+    />
+  </Stack>
+</Playground>

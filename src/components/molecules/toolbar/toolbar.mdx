@@ -1,0 +1,53 @@
+---
+name: Toolbar
+---
+
+import { Playground, PropsTable } from "docz"
+import { Toolbar, Button } from "components"
+import { Preview, Stack } from "components/_helpers"
+
+# Toolbar
+
+<Preview>
+  <Toolbar>
+    <Toolbar.Left>
+      <Button>First button</Button>
+      <Button>Second button</Button>
+    </Toolbar.Left>
+    <Toolbar.Right>
+      <Button>Third button</Button>
+      <Button>Fourth button</Button>
+    </Toolbar.Right>
+  </Toolbar>
+</Preview>
+
+## Basic usage
+
+<Playground>
+  <Toolbar>
+    <Toolbar.Left>
+      <Button>First button</Button>
+      <Button>Second button</Button>
+    </Toolbar.Left>
+    <Toolbar.Right>
+      <Button>Third button</Button>
+      <Button>Fourth button</Button>
+    </Toolbar.Right>
+  </Toolbar>
+  <br />
+  <br />
+  <Toolbar>
+    <Toolbar.Left>
+      <Button>First button</Button>
+      <Button>Second button</Button>
+    </Toolbar.Left>
+  </Toolbar>
+  <br />
+  <br />
+  <Toolbar>
+    <Toolbar.Right>
+      <Button>Third button</Button>
+      <Button>Fourth button</Button>
+    </Toolbar.Right>
+  </Toolbar>
+</Playground>

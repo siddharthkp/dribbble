@@ -1,0 +1,10 @@
+@import "node_modules/tokens/tokens";
+
+.card {
+  background: $global-color-white;
+  padding: map-get($global-spacing, small);
+  border-radius: map-get($global-misc-border-radius, small);
+}
+.card-footer {
+  margin-top: map-get($global-spacing, xsmall);
+}

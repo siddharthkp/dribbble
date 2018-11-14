@@ -1,0 +1,8 @@
+.h-stack {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.h-stack > * {
+  margin: 0 5px;
+}

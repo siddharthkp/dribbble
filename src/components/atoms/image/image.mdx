@@ -1,0 +1,29 @@
+---
+name: Image
+---
+
+import { Playground, PropsTable } from "docz"
+import { Image } from "components/"
+import { Preview, Stack } from "components/_helpers"
+
+# Image
+
+<Preview>
+  <Image
+    width="200"
+    height="150"
+    src="https://cdn.dribbble.com/users/666045/screenshots/3611646/artboard_3.png"
+  />
+</Preview>
+
+<PropsTable of={Image} />
+
+## Basic usage
+
+<Playground>
+  <Image
+    width="200"
+    height="150"
+    src="https://cdn.dribbble.com/users/666045/screenshots/3611646/artboard_3.png"
+  />
+</Playground>

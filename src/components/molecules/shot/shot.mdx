@@ -1,0 +1,41 @@
+---
+name: Shot
+---
+
+import { Playground, PropsTable } from "docz"
+import { Shot, Toolbar } from "components"
+import { Preview, Stack } from "components/_helpers"
+
+# Shot
+
+<Preview>
+  <Shot
+    src="https://cdn.dribbble.com/users/666045/screenshots/3611646/artboard_3_1x.png"
+    stats={{ views: 64, comments: 4, likes: 20 }}
+    user={{
+      name: "Guille Mesyngier",
+      url: "https://dribbble.com/gmesyngier",
+      label: "pro",
+      src:
+        "https://cdn.dribbble.com/users/927565/avatars/small/871881bb1267479631c106f2985c93b9.jpg?1469997181"
+    }}
+  />
+</Preview>
+
+<PropsTable of={Shot} />
+
+## Basic usage
+
+<Playground>
+  <Shot
+    src="https://cdn.dribbble.com/users/666045/screenshots/3611646/artboard_3_1x.png"
+    stats={{ views: 64, comments: 4, likes: 20 }}
+    user={{
+      name: "Guille Mesyngier",
+      url: "https://dribbble.com/gmesyngier",
+      label: "pro",
+      src:
+        "https://cdn.dribbble.com/users/927565/avatars/small/871881bb1267479631c106f2985c93b9.jpg?1469997181"
+    }}
+  />
+</Playground>

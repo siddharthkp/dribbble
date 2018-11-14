@@ -1,0 +1,24 @@
+---
+name: Badge
+---
+
+import { Playground, PropsTable } from "docz"
+import { Badge } from "components"
+import { Preview, Stack } from "components/_helpers"
+
+# Badge
+
+<Preview>
+  <Badge color="#d95988">Pro</Badge>
+</Preview>
+
+<PropsTable of={Badge} />
+
+<Playground>
+  <Stack>
+    <Badge>Pro</Badge>
+    <Badge color="#d95988">Pro</Badge>
+    <Badge>Team</Badge>
+    <Badge color="#4fb4de">Team</Badge>
+  </Stack>
+</Playground>

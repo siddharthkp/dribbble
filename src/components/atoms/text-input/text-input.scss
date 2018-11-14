@@ -1,0 +1,8 @@
+@import "../_input/input";
+
+$font-size: map-get($global-font-size, body-large);
+
+.text-input {
+  @extend %input;
+  $font-size: $font-size;
+}

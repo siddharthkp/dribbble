@@ -1,0 +1,34 @@
+$global-font-family: neue-haas-grotesk-text, Helvetica, Arial, sans-serif;
+
+$global-font-size: (
+  heading1: 30px,
+  heading2: 20px,
+  heading3: 18px,
+  heading4: 12px,
+  body-large: 16px,
+  body-plus: 15px,
+  body: 14px,
+  body-small: 13px,
+  caption-title: 14px,
+  caption: 12px,
+  caption-small: 11px
+);
+
+$global-font-weight: (
+  default: 400,
+  medium: 500,
+  bold: 700
+);
+
+$global-font-line-height: (
+  heading: 1.2,
+  heading-small: 1.5,
+  body-large: 1.5,
+  body-label: 1.5,
+  body: 1.5,
+  body-text: 1.5,
+  body-small: 1.2,
+  caption-title: 1.2,
+  caption-text: 1.4,
+  caption-small: 1.4
+);

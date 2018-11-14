@@ -1,0 +1,130 @@
+$global-color-gray: (
+  100: #f4f4f4,
+  200: #e1e1e7,
+  300: #ddd,
+  400: #bbb,
+  500: #999,
+  600: #777,
+  700: #666,
+  800: #444,
+  900: #333
+);
+
+$global-color-gray: (
+  100: #f4f4f4,
+  200: #e1e1e7,
+  300: #ddd,
+  400: #bbb,
+  500: #999,
+  600: #777,
+  700: #666,
+  800: #444,
+  900: #333
+);
+
+$global-color-white: #fff;
+
+$global-color-pink: (
+  500: #d95988,
+  700: #df3e7b,
+  900: #c22b65
+);
+
+$global-color-red: (
+  300: #ed615c,
+  500: #ea3423,
+  700: #ae2318
+);
+
+$global-color-blue: (
+  300: #4fb4de,
+  500: #3a8bbb,
+  700: #1e6189,
+  900: #0c3f5d
+);
+$global-color-green: (
+  500: #7bbb5e,
+  700: #5b9540,
+  900: #3b6d25
+);
+
+/* Named colors */
+
+$global-color-brand: (
+  500: map-get($global-color-pink, 500),
+  700: map-get($global-color-pink, 700),
+  900: map-get($global-color-pink, 900)
+);
+
+/* Primary colors */
+
+$global-color-primary: (
+  pink: map-get($global-color-pink, 500),
+  blue: map-get($global-color-blue, 500)
+);
+
+/* Secondary colors */
+
+$global-color-secondary: (
+  gray: map-get($global-color-gray, 300),
+  green: map-get($global-color-green, 500),
+  red: map-get($global-color-red, 300),
+  blue: map-get($global-color-blue, 300)
+);
+
+/* Accent colors */
+
+$global-color-accent: (
+  300: map-get($global-color-blue, 300),
+  500: map-get($global-color-blue, 500),
+  700: map-get($global-color-blue, 700),
+  900: map-get($global-color-blue, 900)
+);
+
+/* Success colors */
+
+$global-color-success: (
+  500: map-get($global-color-green, 500),
+  700: map-get($global-color-green, 700),
+  900: map-get($global-color-green, 900)
+);
+
+/* Danger color */
+
+$global-color-danger: (
+  500: map-get($global-color-red, 300)
+);
+
+/* Info colors */
+
+$global-color-info: (
+  500: map-get($global-color-gray, 300)
+);
+
+/* Backgrounds */
+
+$global-color-background: (
+  light: map-get($global-color-gray, 100),
+  light-alt: map-get($global-color-gray, 200),
+  dark: map-get($global-color-gray, 900),
+  dark-alt: map-get($global-color-gray, 800),
+  info: map-get($global-color-info, 500)
+);
+
+/* Text */
+
+$global-color-text: (
+  primary: map-get($global-color-gray, 800),
+  primary-light: map-get($global-color-gray, 600),
+  secondary: map-get($global-color-gray, 500),
+  disabled: map-get($global-color-gray, 400),
+  subtle: map-get($global-color-gray, 400),
+  link: map-get($global-color-blue, 500),
+  link-dark: map-get($global-color-blue, 700),
+  primary-on-dark: map-get($global-color-gray, 300),
+  secondary-on-dark: map-get($global-color-gray, 500)
+);
+
+/* Borders */
+
+$global-color-border-info: map-get($global-color-gray, 400);

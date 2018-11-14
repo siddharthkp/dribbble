@@ -1,0 +1,42 @@
+{
+  "name": "dribbble",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "src/tokens",
+    "src/components",
+    "src/demo"
+  ],
+  "dependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "dev:docs": "docz dev",
+    "dev:storybook": "start-storybook -p 9001 -c .storybook -s ./public",
+    "build": "docz build",
+    "start": "serve dist"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "4.0.4",
+    "@storybook/react": "4.0.4",
+    "babel-core": "6.26.3",
+    "babel-loader": "8.0.4",
+    "docz": "0.12.9",
+    "node-sass": "4.10.0",
+    "rgb-hex": "2.1.0",
+    "sass-loader": "7.1.0",
+    "sass-vars-to-js-loader": "2.0.3",
+    "serve": "10.0.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,94 @@
+---
+name: Button
+---
+
+import { Playground, PropsTable } from "docz"
+import { Button } from "components/"
+import { Preview, Stack } from "components/_helpers"
+
+# Button
+
+<Preview>
+  <Button appearance="primary">Click me</Button>
+</Preview>
+
+<PropsTable of={Button} />
+
+## Basic usage
+
+`Button` supports multiple styles with the `appearance` prop
+
+<Playground>
+  <Stack>
+    <Button appearance="primary">Click me</Button>
+    <Button appearance="secondary">Click me</Button>
+    <Button appearance="secondary-alt">Click me</Button>
+    <Button appearance="info">Click me</Button>
+    <Button appearance="accent">Click me</Button>
+    <Button appearance="success">Click me</Button>
+  </Stack>
+</Playground>
+
+## Disabled
+
+You can pass the disabled prop to make the `Button` disabled
+
+<Playground>
+  <Stack>
+    <Button disabled appearance="primary">
+      Click me
+    </Button>
+    <Button disabled appearance="secondary">
+      Click me
+    </Button>
+    <Button disabled appearance="secondary-alt">
+      Click me
+    </Button>
+    <Button disabled appearance="info">
+      Click me
+    </Button>
+    <Button disabled appearance="accent">
+      Click me
+    </Button>
+    <Button disabled appearance="success">
+      Click me
+    </Button>
+  </Stack>
+</Playground>
+
+## Sizes
+
+`Button` supports multiple sizes as well
+
+<Playground>
+  <Stack>
+    <Button size="large">Click me</Button>
+    <Button>Click me</Button>
+    <Button size="small">Click me</Button>
+  </Stack>
+  <br />
+  <Stack>
+    <Button size="large" appearance="success">
+      Click me
+    </Button>
+    <Button appearance="success">Click me</Button>
+    <Button size="small" appearance="success">
+      Click me
+    </Button>
+  </Stack>
+</Playground>
+
+## With Icon
+
+You can pass the name of the `icon` as a prop
+
+<Playground>
+  <Stack>
+    <Button appearance="primary" icon="like">
+      Like
+    </Button>
+    <Button appearance="secondary-alt" icon="paperclip">
+      Copy
+    </Button>
+  </Stack>
+</Playground>

@@ -1,0 +1,101 @@
+---
+name: Tokens
+---
+
+import { Preview, Box, Boxes, Stack } from "../components/_helpers"
+/* Voodoo magic to import colors from scss */
+import colors from "!!sass-vars-to-js-loader!node_modules/tokens/colors.scss"
+
+# Tokens
+
+## Colors
+
+<Boxes colors={[colors.globalColorWhite]} name="white" />
+<Boxes colors={colors.globalColorGray} name="gray" />
+<Boxes colors={colors.globalColorPink} name="pink" />
+<Boxes colors={colors.globalColorBlue} name="blue" />
+<Boxes colors={colors.globalColorGreen} name="green" />
+<Boxes colors={colors.globalColorRed} name="red" />
+<Boxes colors={colors.globalColorBrand} name="brand" />
+
+## Primary colors
+
+<Box color="#d95988" name="primary-pink" />
+<Box color="#3a8bbb" name="primary-blue" />
+
+## Secondary colors
+
+<Box color="#ddd" name="secondary-gray" />
+<Box color="#7bbb5e" name="secondary-green" />
+<Box color="#ed615c" name="secondary-red" />
+<Box color="#4fb4de" name="secondary-blue" />
+
+## Color States
+
+<Box color="#7bbb5e" name="success-bg" />
+<Box color="#3b6d25" name="success-text" />
+<Box color="#ea3423" name="destructive-bg" />
+<Box color="#ae2318" name="destructive-text" />
+
+<br/><br/>
+
+## Spacing
+
+<Preview>
+  <Stack>
+    <Box size="5px" name="spacing-xsmall" />
+    <Box size="10px" name="spacing-small " />
+    <Box size="15px" name="spacing-medium " />
+    <Box size="20px" name="spacing-large " />
+    <Box size="25px" name="spacing-xlarge " />
+    <Box size="30px" name="spacing-xxlarge " />
+  </Stack>
+</Preview>
+
+<br/><br/>
+
+## Typography
+
+<Preview>
+  <br />
+  <div style={{ fontSize: 36 }}>Good design is good business</div>
+  <br />
+  <div style={{ fontSize: 24 }}>Good design is good business</div>
+  <br />
+  <div style={{ fontSize: 14 }}>Good design is good business</div>
+  <br />
+  <div style={{ fontSize: 13 }}>Good design is good business</div>
+</Preview>
+
+<br/><br/>
+
+## Miscellaneous
+
+### Shadow
+
+<Preview>
+  <Stack>
+    <Box
+      color="#FFF"
+      name="shallow"
+      style={{ border: "none", boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.1)" }}
+    />
+    <Box
+      color="#FFF"
+      name="deep"
+      style={{
+        border: "none",
+        boxShadow:
+          "0px 0px 1px rgba(102, 102, 102, 0.5), 0px 1px 2px rgba(102, 102, 102, 0.25)"
+      }}
+    />
+    <Box
+      color="#FFF"
+      name="inset"
+      style={{
+        border: "none",
+        boxShadow: "inset 0px 1px 2px rgba(0, 0, 0, 0.15)"
+      }}
+    />
+  </Stack>
+</Preview>

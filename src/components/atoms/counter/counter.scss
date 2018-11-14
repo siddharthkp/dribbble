@@ -1,0 +1,14 @@
+@import "node_modules/tokens/tokens";
+
+$magic-icon-margin: 4px;
+
+.counter {
+  font-size: map-get($global-font-size, caption);
+  color: map-get($global-color-text, subtle);
+  display: flex;
+  align-items: center;
+}
+.counter i {
+  color: map-get($global-color-text, subtle);
+  margin-right: $magic-icon-margin;
+}

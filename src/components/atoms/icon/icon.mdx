@@ -1,0 +1,25 @@
+---
+name: Icon
+---
+
+import { Playground, PropsTable } from "docz"
+import { Icon } from "components"
+import { Preview, Stack } from "components/_helpers"
+
+# Icon
+
+<Preview>
+  <Icon name="heart" color="#d95988" />
+</Preview>
+
+<PropsTable of={Icon} />
+
+<Playground>
+  <Stack>
+    <Icon color="#7bbb5e" name="check" />
+    <Icon color="#d95988" name="heart" />
+    <Icon color="#3a8bbb" name="link" />
+    <Icon name="list" />
+    <Icon name="paperclip" />
+  </Stack>
+</Playground>

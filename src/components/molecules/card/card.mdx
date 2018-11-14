@@ -1,0 +1,33 @@
+---
+name: Card
+---
+
+import { Playground, PropsTable } from "docz"
+import { Card, Image } from "components/"
+import { Preview, Stack } from "components/_helpers"
+
+# Card
+
+<Preview>
+  <div style={{ width: 220 }}>
+    <Card>
+      <Card.Body>
+        <Image src="https://cdn.dribbble.com/users/666045/screenshots/3611646/artboard_3_1x.png" />
+      </Card.Body>
+      <Card.Footer>footer text</Card.Footer>
+    </Card>
+  </div>
+</Preview>
+
+## Basic Usage
+
+<Playground>
+  <div style={{ width: 220 }}>
+    <Card>
+      <Card.Body>
+        <Image src="https://cdn.dribbble.com/users/666045/screenshots/3611646/artboard_3_1x.png" />
+      </Card.Body>
+      <Card.Footer>footer text</Card.Footer>
+    </Card>
+  </div>
+</Playground>
