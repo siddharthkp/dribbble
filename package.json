@@ -13,7 +13,7 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "dev:docs": "docz dev",
+    "dev": "docz dev",
     "dev:storybook": "start-storybook -p 9001 -c .storybook -s ./public",
     "build": "docz build",
     "start": "serve dist"

@@ -9,11 +9,22 @@
 
 #### setup
 
+If you don't have NodeJS, install it from here: https://nodejs.org/en/download
+
+You should also have `yarn >= 1.0`, install guide: https://yarnpkg.com/en/docs/install
+
+&nbsp;
+
 ```
 git clone https://github.com/siddharthkp/dribbble.git
 
 cd dribbble
 
 yarn install
-(or npm install)
+
+(workspaces don't work with npm)
 ```
+
+#### scripts
+
+Run `yarn dev` to start documentation site
