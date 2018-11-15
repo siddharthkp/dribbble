@@ -1,7 +1,9 @@
 import React from "react"
+import getColor from "./color"
 import "./box.scss"
 
 const Box = props => {
+  const color = getColor(props.color)
   return (
     <div className="h-box">
       <div
@@ -9,12 +11,12 @@ const Box = props => {
         style={{
           width: props.size,
           height: props.size,
-          backgroundColor: props.color,
+          backgroundColor: color,
           ...props.style
         }}
       />
       <div>{props.name}</div>
-      {typeof props.color === "string" ? <div>{props.color}</div> : null}
+      {color ? <div>{color}</div> : null}
     </div>
   )
 }
