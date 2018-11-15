@@ -110,22 +110,6 @@ $border--active: (
   success: map-get($global-color-success, -50) 0
 );
 
-/* Size map for padding */
-$sizes: (
-  large: (
-    y: map-get($global-spacing, large),
-    x: map-get($global-spacing, large)
-  ),
-  normal: (
-    y: map-get($global-spacing, small),
-    x: map-get($global-spacing, medium)
-  ),
-  small: (
-    y: map-get($global-spacing, xsmall),
-    x: map-get($global-spacing, small)
-  )
-);
-
 .button {
   font-family: $font-family;
   font-size: $font-size;
@@ -136,9 +120,6 @@ $sizes: (
   border: $border-size solid;
   border-radius: $border-radius;
   cursor: pointer;
-  /* default to normal padding */
-  padding: map-get(map-get($sizes, normal), y)
-    map-get(map-get($sizes, normal), x);
 }
 
 /* For each appearance, created a new class  */
@@ -171,11 +152,25 @@ $sizes: (
   }
 }
 
-/* For each size, created a new class  */
-@each $name, $value in $sizes {
-  .button--#{$name} {
-    padding: map-get($value, y) map-get($value, x);
-  }
+/* Padding for button */
+$padding: (
+  large-vertical: map-get($global-spacing, large),
+  large-horizonal: map-get($global-spacing, large),
+  normal-vertical: map-get($global-spacing, small),
+  normal-horizonal: map-get($global-spacing, medium),
+  small-vertical: 4px,
+  small-horizonal: 8px
+);
+
+.button--large {
+  padding: map-get($padding, large-vertical) map-get($padding, large-horizonal);
+}
+.button--normal {
+  padding: map-get($padding, normal-vertical)
+    map-get($padding, normal-horizonal);
+}
+.button--small {
+  padding: map-get($padding, small-vertical) map-get($padding, small-horizonal);
 }
 
 /* Styles for icon inside button */
