@@ -28,7 +28,7 @@
     "rgb-hex": "2.1.0",
     "sass-loader": "7.1.0",
     "sass-vars-to-js-loader": "2.0.3",
-    "serve": "10.0.2"
+    "serve": "10.1.2"
   },
   "eslintConfig": {
     "extends": "react-app"
